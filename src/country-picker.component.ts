@@ -6,8 +6,8 @@ import { CountryPickerService } from './country-picker.service';
 
 @Component({
   selector: 'countryPicker',
-  template: `<select class="form-control form-control-sm">
-                <option *ngFor="let c of countries; let i = index;" [value]="getValue(c)"><img [hidden]="!flag" src="{{baseUrl + c.cca3}}.svg">{{getName(c)}}</option>
+  template: `<select class="th-country-picker">
+                <option *ngFor="let c of countries; let i = index;" [value]="getValue(c)"><img [hidden]="!flag" src="{{baseUrl + c.cca3.toLowerCase(}}}.svg">{{getName(c)}}</option>
             </select>`
 })
 export class CountryPickerComponent {
